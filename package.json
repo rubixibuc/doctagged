@@ -2,9 +2,14 @@
   "name": "doctagged",
   "version": "0.0.3",
   "description": "Functional Javascript Documentation Tagged Literal Library",
-  "main": "index.js",
+  "browser": "dist/doctagged.js",
+  "main": "dist/doctagged.js",
+  "module": "src",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production",
+    "test": "jest --collectCoverage",
+    "prettier": "prettier --write \"src/**/*{.js,.json}\"",
+    "prepublishOnly": "npm ci && npm run test && npm run build"
   },
   "repository": {
     "type": "git",
@@ -23,5 +28,18 @@
   "bugs": {
     "url": "https://github.com/rubixibuc/doctagged/issues"
   },
-  "homepage": "https://github.com/rubixibuc/doctagged#readme"
+  "homepage": "https://github.com/rubixibuc/doctagged#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.7.7",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
 }
