@@ -1,6 +1,6 @@
 {
   "name": "doctagged",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Functional Javascript Documentation Tagged Literal Library",
   "browser": "dist/doctagged.js",
   "main": "dist/doctagged.js",
